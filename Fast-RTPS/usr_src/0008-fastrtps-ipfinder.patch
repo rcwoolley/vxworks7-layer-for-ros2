@@ -1,0 +1,25 @@
+diff --git a/src/cpp/utils/IPFinder.cpp b/src/cpp/utils/IPFinder.cpp
+index ef3449f97..3a3d7d65d 100644
+--- a/src/cpp/utils/IPFinder.cpp
++++ b/src/cpp/utils/IPFinder.cpp
+@@ -30,12 +30,12 @@
+ #include <arpa/inet.h>
+ #include <sys/socket.h>
+ #include <netdb.h>
++#include <net/if.h>
+ #include <ifaddrs.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <unistd.h>
+ #include <string.h>
+-#include <net/if.h>
+ #endif
+ 
+ 
+@@ -339,4 +339,4 @@ std::string IPFinder::getIPv6Address(const std::string &name)
+ 
+     freeaddrinfo(result);
+     return "";
+-}
+\ No newline at end of file
++}
